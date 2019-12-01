@@ -39,7 +39,8 @@ export class CribListingComponent implements OnInit {
       );
 
     this.cribsService.newCribSubject.subscribe(
-      data => this.cribs = [data, ...this.cribs]
+      // use spread to place new data in front of array
+      data => this.cribs = [data, ...this.cribs]  
     );
   }
 
