@@ -10,7 +10,7 @@ import { UtilService } from './../services/util.service';
 })
 export class AddListingFormComponent implements OnInit {
 
-  @ViewChild('newCribForm') newCribForm: NgForm;
+  @ViewChild('newCribForm') newCribForm: NgForm; // to clear form
   propertyTypes: Array<string> = ['Condo', 'Duplex', 'House'];
 
   constructor(
@@ -23,7 +23,7 @@ export class AddListingFormComponent implements OnInit {
 
   onCribSubmit(data) {
     this.cribsService.addCrib(data);
-    this.newCribForm.reset();
+    this.newCribForm.reset(); // to clear form after submit
   }
 
 }
