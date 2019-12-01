@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { cribs } from '../../data/cribs';
 import { CribsService } from './../services/cribs.service';
 import { UtilService } from './../services/util.service';
 import { SortByPipe } from '../pipes/sort-by.pipe';
@@ -11,7 +12,8 @@ import { Crib } from './../crib';
 })
 export class CribListingComponent implements OnInit {
 
-  cribs: Array<Crib> = [];
+  cribs: Array<any> = cribs;
+  //cribs: Array<Crib> = [];
   error: string = '';
   sortField: string = 'price';
   sortDirection: string = 'asc';
