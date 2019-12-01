@@ -15,7 +15,7 @@ export class CribsService {
   }
 
   addCrib(data) {
-    data.image = 'default-crib';
+    data.image = 'default-crib'; // add default image
     this.newCribSubject.next(data);
   }
 
